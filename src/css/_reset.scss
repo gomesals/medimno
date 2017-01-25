@@ -1,0 +1,47 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+// html {
+	// position: relative;
+	// min-height: 100%;
+// }
+
+body {
+	// margin-bottom: 60px;
+	font-size: 100%;
+	// &>.container {
+		// padding: 0 15px;
+	// }
+}
+
+// footer {
+// 	position: absolute;
+// 	bottom: 0;
+// 	width: 100%;
+// 	height: 60px;
+// 	&>.container {
+// 		padding-right: 15px;
+// 		padding-left: 15px
+// 	}
+// }
+
+@media (max-width: $screen-xs-max) {
+	body {
+		>.container {
+			// margin-bottom: 140px !important;
+		}
+	}
+}
+@media screen and (max-width: $screen-sm-min) {
+	body{
+		font-size: 150%;
+	}
+}
+
+@media screen and (min-width: $screen-sm-min) {
+	body{
+		font-size: 200%;
+	}
+}

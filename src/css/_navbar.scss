@@ -1,0 +1,45 @@
+nav{
+	background-color: #f5f5f5;
+	border-top-left-radius: .25em;
+	border-top-right-radius: .25em;
+	@include appTransition(300ms, all);
+	ul{
+		list-style: none;
+		text-align: center;
+		li{
+			display: inline-block;
+			padding: 1em;
+			a{
+				&, &:visited, &:active, &:focus{
+					color: $textSecondary;
+					padding: .5em .7em;
+					border-radius: .7em;
+					font-weight: 300;
+					text-decoration: none;
+				}
+				@include appTransition(300ms, 'background-color');
+				&:hover{
+					text-decoration: none;
+					color: $textSecondary;
+					background-color: darken(#f5f5f5, 2%);
+				}
+				&.active{
+					background-color: #fff;
+				}
+			}
+		}
+	}
+	&.fixed{
+		position: fixed;
+		border-radius: none;
+		top: 0;
+		left: 0;
+		width: 100%;
+		z-index: 1000;
+	}
+}
+@media screen and (max-width: $screen-sm-min) {
+	nav{
+		display: none;
+	}
+}

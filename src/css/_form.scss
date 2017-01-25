@@ -1,0 +1,26 @@
+#contact{
+	.desc{
+		.form{
+			label{
+				font-size: 0.8em;
+				font-weight: 400;
+				color: $textHint;
+			}
+			input, textarea{
+				background-color: #fff;
+				border: 1px solid darken($backgroundColor, 2%);
+				@include boxShadow(none, true);
+				&:active, &:focus{
+					border-color: $accentDark;
+				}
+			}
+			textarea{
+				height: 30vh;
+			}
+			button{
+				// color: $textSecondary;
+				border-radius: 5px;
+			}
+		}
+	}
+}

@@ -1,0 +1,21 @@
+{
+  "name": "medimno",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Alexandre Silva <contato@silvalexandre.com>"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass": "^3.3.7"
+  }
+}

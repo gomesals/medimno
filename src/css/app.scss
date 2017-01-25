@@ -1,0 +1,199 @@
+@import 'default';
+@import 'navbar';
+@import 'form';
+header{
+	width: 100%;
+	height: 80vh;
+	font-size: 1em;
+	text-align: center;
+	img{
+		margin-top: 10vh;
+	}
+	h1{
+		font-weight: 300;
+		color: $primaryLight;
+	}
+	h2{
+		font-weight: 300;
+		font-size: 0.9em;
+	}
+}
+#main{
+	border-radius: .25em;
+	padding: 0;
+	section{
+		padding: 2em;
+		border-bottom: 1px solid $divider;
+		&#team{
+			border-bottom: none;
+		}
+		h2{
+			font-weight: 300;
+		}
+	}
+	.white{
+		background-color: #fff;
+	}
+	#about{
+		h2{
+
+		}
+		img{
+			margin: 1em auto 2em;
+		}
+		p{
+			font-weight: 300;
+		}
+	}
+	#products{
+		#candies{
+			margin-top: 1.5em;
+			@include make-row();
+			.item{
+				@include make-xs-column(6);
+				@include make-sm-column(6);
+				@include make-md-column(3);
+				@include make-lg-column(3);
+				text-align: center;
+				img{
+					margin: 0 auto;
+				}
+				.title{
+					font-weight: 300;
+					margin-top: .5em;
+					margin-bottom: 1.5em;
+				}
+			}
+		}
+		p{
+			font-weight: 400;
+			color: $textSecondary;
+			margin-top: 4em;
+			margin-bottom: 2.5em;
+		}
+		#used{
+			@include make-row();
+			.item{
+				@include make-xs-column(6);
+				@include make-sm-column(6);
+				@include make-md-column(2);
+				@include make-lg-column(2);
+				text-align: center;
+				padding: 1.5em .5em;
+				.title{
+					font-weight: 300;
+					font-size: 2em;
+					margin-bottom: .5em;
+				}
+				.desc{
+					font-weight: 400;
+				}
+				$background: $primaryLight $primary $primaryDark $accentDark $accent $accentLight;
+				// $background: $primaryDark $accentLight $accent $primary $primaryLight $accentDark;
+				// $color: $textWhiteSecondary $textWhiteSecondary $textWhiteSecondary $textSecondary $textSecondary $textSecondary;
+				// $background: $primaryDark $primary $primaryLight $accentLight $accent $accentDark;
+				@each $item in $background{
+					$i: index($background, $item);
+					&#bg#{$i}{
+						background-color: $item;
+						// color: nth($color, $i);
+						color: $textWhite;
+					}
+				}
+			}
+		}
+	}
+	#team{
+		.desc{
+			@include make-row();
+			margin-top: 5em;
+			.item{
+				@include make-xs-column(12);
+				@include make-sm-column(12);
+				@include make-md-column(4);
+				@include make-lg-column(4);
+				margin-bottom: 15px;
+				text-align: center;
+				img{
+					margin: 0 auto;
+					border-radius: 50%;
+					margin-bottom: 1em;
+					border: 5px solid #fff;
+					@include boxShadow(0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24));
+				}
+				.title{
+					font-weight: 300;
+					font-size: 1.3em;
+					margin-bottom: 1rem;
+				}
+				.job{
+					font-size: 1em;
+					font-weight: 300;
+				}
+				p{
+					font-size: 1.5rem;
+				}
+			}
+		}
+	}
+	#contact{
+		.desc{
+			@include make-row();
+		}
+		.form{
+			@include make-xs-column(12);
+			@include make-sm-column(12);
+			@include make-md-column(6);
+			@include make-lg-column(6);
+		}
+		.info{
+			@include make-xs-column(12);
+			@include make-sm-column(12);
+			@include make-md-column-offset(1);
+			@include make-md-column(5);
+			@include make-lg-column-offset(1);
+			@include make-lg-column(5);
+			dl{
+				dt{
+					font-weight: 400;
+					width: 3em;
+					margin: 0;
+					clear: left;
+					float: left;
+					margin-bottom: 1em;
+					color: $textHint;
+				}
+				dd{
+					margin: 0 0 1em 5.5em;
+					font-weight: 300;
+					@include linkBack($text);
+				}
+			}
+		}
+	}
+}
+footer{
+	margin-top: 5vh;
+	margin-bottom: 10vh;
+	text-align: center;
+	#copy{
+		color: $textHint;
+		font-size: .9em;
+		margin-bottom: .5em;
+	}
+	@include linkBack();
+}
+@media screen and (max-width: $screen-sm-min) {
+	#main{
+		margin: 0 2em;
+	}
+}
+@media screen and (max-width: $screen-md-min){
+	#main{
+		#contact{
+			.info{
+				margin-top: 2em;
+			}
+		}
+	}
+}

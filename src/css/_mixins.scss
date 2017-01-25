@@ -1,0 +1,32 @@
+@mixin appTransition($time, $property, $type: linear) {
+    -moz-transition: all $time $type;
+    -moz-transition-property: $property;
+    -webkit-transition: all $time $type;
+    -webkit-transition-property: $property;
+    -o-transition: all $time $type;
+    -o-transition-property: $property;
+    transition: all $time $type;
+    transition-property: $property;
+}
+@mixin boxShadow($what, $what2) {
+    $box: $what, $what2;
+    @if $what2==true {
+        $box: none !important;
+    }
+    -webkit-box-shadow: $box;
+    -moz-box-shadow: $box;
+    box-shadow: $box;
+}
+@mixin linkBack($color: $textHint){
+	a{
+		@include appTransition(300ms, all);
+		font-size: .9em;
+		color: $color;
+		border-bottom: 1px dotted $textHint;
+		&:hover{
+			color: $accentDark;
+			border-bottom: none;
+			text-decoration: none;
+		}
+	}
+}

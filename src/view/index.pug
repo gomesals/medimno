@@ -1,0 +1,108 @@
+doctype html
+html(lang="en")
+	head
+		meta(charset="utf-8")
+		meta(http-equiv="X-UA-Compatible", content="IE=edge")
+		meta(name="viewport", content="width=device-width, initial-scale=1")
+		title Medimno - Doceria
+		link(rel="stylesheet", href="css/app.css")
+	body
+		header
+			img.img-responive(src="http://placehold.it/220x220", alt="Medimmo")
+			h1 Medimmo
+			h2 Uma fábrica de sonhos<br> bolos e brigadeiros também.
+		#main.container
+			nav
+				ul
+					li
+						a(href="#", data-to="about", title="Sobre nós") Sobre nós
+					li
+						a(href="#", data-to="products", title="Doces") Doces
+					li
+						a(href="#", data-to="team", title="Quem somos") Quem somos
+					li
+						a(href="#", data-to="contact", title="Contato") Contato
+			section#about.white
+				h2 Sobre nós
+				img(src="http://placehold.it/780x220", alt="int").img-responsive
+				p cataloguize rheumatism quarterman toolplate unticketed foenngreek jonquille calathian isochronous climath hydrorrhachis hydrophthalmos somnambulic shivy credensiveness stupeous sondeli parading misrealize coracopectoral gaj repress microdissection ropish
+			section#products.white
+				h2 Doces
+				#candies
+					.item
+						img(src="http://placehold.it/220x220", alt="candy").img-responsive
+						.title Brigadeiros
+					.item
+						img(src="http://placehold.it/220x220", alt="candy").img-responsive
+						.title Bolos
+					.item
+						img(src="http://placehold.it/220x220", alt="candy").img-responsive
+						.title Macaroons
+					.item
+						img(src="http://placehold.it/220x220", alt="candy").img-responsive
+						.title Bem-Casados
+				p Já utilizamos mais de
+				#used
+					.item#bg1
+						.title 18kg
+						.desc de açúcar
+					.item#bg2
+						.title 24kg
+						.desc de farinha de trigo
+					.item#bg3
+						.title 600
+						.desc ovos
+					.item#bg4
+						.title 50l
+						.desc de leite
+					.item#bg5
+						.title 5kg
+						.desc de chocolate
+					.item#bg6
+						.title muito
+						.desc amor
+			section#team.white
+				h2 Quem somos
+				.desc
+					.item
+						img(src="http://placehold.it/220x220", alt="team").img-responsive
+						.title Debby Mcswiggan
+						.job Gerente
+					.item
+						img(src="http://placehold.it/220x220", alt="team").img-responsive
+						.title Adam Loveday
+						.job Doceiro
+					.item
+						img(src="http://placehold.it/220x220", alt="team").img-responsive
+						.title Monique Sunstrom
+						.job Operadora de Caixa
+			section#contact
+				h2 Contato
+				.desc
+					.form
+						form(action="/", method="POST", onsubmit="return false;")
+							.form-group
+								label(for="name") Nome
+								input(type="text")#name.form-control
+							.form-group
+								label(for="email") E-mail
+								input(type="email")#email.form-control
+							.form-group
+								label(for="msg") Mensagem
+								textarea#msg.form-control
+							.form-group
+								button.btn.btn-primary.pull-right Enviar mensagem
+					.info
+						dl
+							dt Endereço
+							dd Rua dos Papéis, 30, Jardim Florido &bull; São Paulo, SP &bull; 99999-000
+							dt E-mail
+							dd
+								a(href="#", title="doces@medimno.com") doces@medimno.com
+							dt Telefone
+							dd (11) 99999-9999
+		footer
+			#copy Medimmo &copy; Todos os direitos 	reservados - 2017
+			a(href="http://silvalexandre.com", title="Feito com <3", target="_blank") Feito com &lt;3
+		script(src="https://code.jquery.com/jquery-1.12.4.min.js")
+		script(src="js/app.js")
