@@ -24,7 +24,7 @@ module.exports = grunt => {
 				}
 			},
 			imgs: {
-				files: ['src/imgs/*.{png,jpg,gif}'],
+				files: ['src/images/*.{png,jpg,gif}'],
 				tasks: ['imagemin'],
 				options: {
 					spawn: false
