@@ -15,13 +15,19 @@ $dividerWhite: rgba($textS,.12);
 $mainText: $text;
 
 // Brand colors
-$backgroundColor: #EEEEEE;
+$backgroundColor: #f8f9fa;
 $primary: #E91E63; //500
+$primary: #d6336c; //500
 $primaryLight: #F06292; //300
+$primaryLight: #f06595; //300
 $primaryDark: #C2185B; //700
+$primaryDark: #c2255c; //700
 $accent: #E040FB; //A200
+$accent: #ae3ec9; //A200
 $accentLight: #EA80FC; //A100
+$accentLight: #cc5de8; //A100
 $accentDark: #D500F9; //A400
+$accentDark: #9c36b5; //A400
 @import "mixins";
 @import "vendors/bootstrap/variables";
 @import "../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins";
